@@ -2,7 +2,6 @@ const express = require("express");
 const { resolve } = require("path");
 const axios = require("axios");
 const dotenv = require("dotenv");
-const open = require('open');
 
 dotenv.config();
 
@@ -109,7 +108,11 @@ app.post("/webhook", async (req, res) => {
   res.sendStatus(200);
 });
 
-app.listen(PORT, async () => {
-  await open(`http://localhost:${PORT}`);
-  console.log(`The app listening at http://localhost:${PORT}`);
-});
+if ('development' === app.get('env')) {
+  const open = require('open');
+
+  app.listen(PORT, async () => {
+    await open(`http://localhost:${PORT}`);
+    console.log(`The app listening at http://localhost:${PORT}`);
+  });
+}
