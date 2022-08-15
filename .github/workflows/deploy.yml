@@ -24,7 +24,7 @@ jobs:
             WEBHOOK_ID
         env:
           NODE_ENV: staging
-          HD_CLIENT_ID: ${{secrets.CLIENT_ID}}
-          HD_CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
-          HD_PAYPAL_API_BASE: ${{secrets.PAYPAL_API_BASE}}
-          HD_WEBHOOK_ID: ${{secrets.WEBHOOK_ID}}
+          CLIENT_ID: ${{secrets.CLIENT_ID}}
+          CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
+          PAYPAL_API_BASE: ${{secrets.PAYPAL_API_BASE}}
+          WEBHOOK_ID: ${{secrets.WEBHOOK_ID}}
