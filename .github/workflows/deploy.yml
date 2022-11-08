@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: staging
+    environment: production
     steps:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12
@@ -24,7 +24,7 @@ jobs:
             PAYPAL_API_BASE
             WEBHOOK_ID
         env:
-          NODE_ENV: staging
+          NODE_ENV: production
           CLIENT_ID: ${{secrets.CLIENT_ID}}
           CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
           PAYPAL_API_BASE: ${{secrets.PAYPAL_API_BASE}}
