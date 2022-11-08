@@ -1,4 +1,8 @@
 {
+  "version": "0.1.0",
+  "engines": {
+    "node": "19.x"
+  },
   "scripts": {
     "start": "node server/index.js",
     "dev": "node scripts/webhook-proxy.js & node server/index.js"
@@ -16,7 +20,7 @@
   },
   "devDependencies": {
     "eslint": "^7.22.0",
-    "htmlhint": "^0.14.2",
+    "htmlhint": "^1.1.4",
     "htmlhintrc": "^1.0.1",
     "ngrok": "^3.4.0",
     "open": "^8.4.0"
